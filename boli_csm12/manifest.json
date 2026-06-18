@@ -1,0 +1,13 @@
+﻿{
+  "domain": "boli_csm12",
+  "name": "广东博立科技 CSM12电能表",
+  "version": "1.0.0",
+  "requirements": ["pyserial==3.5", "pymodbus==3.1.1"],
+  "dependencies": [],
+  "codeowners": ["@你的GitHub用户名"],
+  "config_flow": true,
+  "documentation": "https://github.com/你的GitHub用户名/ha-boli-csm12",
+  "issue_tracker": "https://github.com/你的GitHub用户名/ha-boli-csm12/issues",
+  "iot_class": "local_polling",
+  "loggers": ["custom_components.boli_csm12"]
+}
