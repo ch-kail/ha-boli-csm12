@@ -124,18 +124,6 @@ SENSOR_TYPES: tuple[ModbusSensorEntityDescription, ...] = (
         device_class=SensorDeviceClass.POWER_FACTOR,
         state_class=SensorStateClass.MEASUREMENT,
     ),
-    # Phase angle 30037 → 0x0024
-    ModbusSensorEntityDescription(
-        key="phase_angle",
-        translation_key="phase_angle",
-        address=0x0024,
-        input_type="input",
-        data_type="float32",
-        native_unit_of_measurement="°",
-        scale=0.01,
-        precision=2,
-        state_class=SensorStateClass.MEASUREMENT,
-    ),
     # Frequency 30071 → 0x0046
     ModbusSensorEntityDescription(
         key="frequency",
