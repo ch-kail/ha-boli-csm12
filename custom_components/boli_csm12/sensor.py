@@ -14,47 +14,6 @@ from .const import DOMAIN, SENSOR_TYPES
 
 _LOGGER = logging.getLogger(__name__)
 
-# 名称映射表，兜底用
-SENSOR_NAMES = {
-    "en": {
-        "voltage": "Voltage",
-        "current": "Current",
-        "active_power": "Active Power",
-        "apparent_power": "Apparent Power",
-        "reactive_power": "Reactive Power",
-        "power_factor": "Power Factor",
-        "phase_angle": "Phase Angle",
-        "frequency": "Frequency",
-        "import_active_energy": "Import Active Energy",
-        "export_active_energy": "Export Active Energy",
-        "import_reactive_energy": "Import Reactive Energy",
-        "export_reactive_energy": "Export Reactive Energy",
-        "total_reactive_energy": "Total Reactive Energy",
-        "carbon_emission": "Carbon Emission",
-        "power_demand": "Power Demand",
-        "active_energy": "Total Active Energy",
-    },
-    "zh-Hans": {
-        "voltage": "电压",
-        "current": "电流",
-        "active_power": "有功功率",
-        "apparent_power": "视在功率",
-        "reactive_power": "无功功率",
-        "power_factor": "功率因数",
-        "phase_angle": "相位角",
-        "frequency": "频率",
-        "import_active_energy": "正向有功电能",
-        "export_active_energy": "反向有功电能",
-        "import_reactive_energy": "正向无功电能",
-        "export_reactive_energy": "反向无功电能",
-        "total_reactive_energy": "总无功电能",
-        "carbon_emission": "碳排放",
-        "power_demand": "功率需量",
-        "active_energy": "累计有功电能",
-    }
-}
-
-
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: ConfigEntry,
