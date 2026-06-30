@@ -45,7 +45,6 @@
       "apparent_power": { "name": "Apparent Power" },
       "reactive_power": { "name": "Reactive Power" },
       "power_factor": { "name": "Power Factor" },
-      "phase_angle": { "name": "Phase Angle" },
       "frequency": { "name": "Frequency" },
       "import_active_energy": { "name": "Import Active Energy" },
       "export_active_energy": { "name": "Export Active Energy" },
