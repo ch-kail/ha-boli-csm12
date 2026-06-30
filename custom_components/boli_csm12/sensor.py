@@ -14,7 +14,6 @@ from .const import DOMAIN, SENSOR_TYPES
 
 _LOGGER = logging.getLogger(__name__)
 
-# 名称映射表，兜底用
 SENSOR_NAMES = {
     "en": {
         "voltage": "Voltage",
