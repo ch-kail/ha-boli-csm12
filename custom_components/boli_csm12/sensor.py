@@ -14,6 +14,28 @@ from .const import DOMAIN, SENSOR_TYPES
 
 _LOGGER = logging.getLogger(__name__)
 
+# 名称映射表，兜底用
+SENSOR_NAMES = {
+    "en": {
+        "voltage": "Voltage",
+        "current": "Current",
+        "active_power": "Active Power",
+        "apparent_power": "Apparent Power",
+        "reactive_power": "Reactive Power",
+        "power_factor": "Power Factor",
+        "phase_angle": "Phase Angle",
+        "frequency": "Frequency",
+        "import_active_energy": "Import Active Energy",
+        "export_active_energy": "Export Active Energy",
+        "import_reactive_energy": "Import Reactive Energy",
+        "export_reactive_energy": "Export Reactive Energy",
+        "total_reactive_energy": "Total Reactive Energy",
+        "carbon_emission": "Carbon Emission",
+        "power_demand": "Power Demand",
+        "active_energy": "Total Active Energy",
+    }
+}
+
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: ConfigEntry,
