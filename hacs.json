@@ -1,5 +1,5 @@
 {
-    "name": "Boli CSM12 Electric Meter",
+    "name": "BOLITECH CSM12 Electric Meter",
     "render_readme": true,
     "domains": ["sensor"],
     "homeassistant": "2024.1.0",
