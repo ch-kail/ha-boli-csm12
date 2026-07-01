@@ -1,0 +1,131 @@
+type: vertical-stack
+cards:
+  - type: custom:mushroom-title-card
+    title: Smart Energy Meter Monitor
+    subtitle: Modbus RTU Real-time Data Acquisition
+  - type: custom:mushroom-entity-card
+    entity: sensor.energy_meter_active_power
+    name: Current Active Power
+    icon: mdi:flash
+    icon_color: orange
+    primary_info: state
+    secondary_info: name
+    fill_container: true
+    layout: horizontal
+    tap_action:
+      action: more-info
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_voltage
+        name: Grid Voltage
+        icon: mdi:lightning-bolt
+        icon_color: blue
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_current
+        name: Line Current
+        icon: mdi:current-ac
+        icon_color: blue
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_frequency
+        name: Grid Frequency
+        icon: mdi:sine-wave
+        icon_color: green
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_power_factor
+        name: Power Factor
+        icon: mdi:angle-acute
+        icon_color: purple
+  - type: custom:mushroom-title-card
+    title: Power Composition
+    subtitle: Active · Apparent · Reactive
+  - type: grid
+    columns: 3
+    square: false
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_active_power
+        name: Active Power
+        icon: mdi:power-plug
+        icon_color: orange
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_apparent_power
+        name: Apparent Power
+        icon: mdi:triangle-outline
+        icon_color: cyan
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_reactive_power
+        name: Reactive Power
+        icon: mdi:react
+        icon_color: pink
+  - type: custom:mushroom-title-card
+    title: Energy Accumulation
+    subtitle: Consumption & Grid Export
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_import_active_energy
+        name: Import Active Energy (Consumption)
+        icon: mdi:transmission-tower-import
+        icon_color: red
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_export_active_energy
+        name: Export Active Energy (Grid Feed-in)
+        icon: mdi:transmission-tower-export
+        icon_color: green
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_active_energy
+        name: Total Active Energy
+        icon: mdi:counter
+        icon_color: blue
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_power_demand
+        name: Peak Power Demand
+        icon: mdi:chart-line
+        icon_color: deep-orange
+  - type: custom:mushroom-title-card
+    title: Auxiliary Metering
+  - type: grid
+    columns: 3
+    square: false
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_total_reactive_energy
+        name: Total Reactive Energy
+        icon: mdi:react
+        icon_color: pink
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_import_reactive_energy
+        name: Import Reactive Energy
+        icon: mdi:arrow-down-bold
+        icon_color: pink
+      - type: custom:mushroom-entity-card
+        entity: sensor.energy_meter_export_reactive_energy
+        name: Export Reactive Energy
+        icon: mdi:arrow-up-bold
+        icon_color: pink
+  - type: custom:mushroom-entity-card
+    entity: sensor.energy_meter_carbon_emission
+    name: Total Carbon Emission
+    icon: mdi:molecule-co2
+    icon_color: brown
+  - type: history-graph
+    entities:
+      - entity: sensor.energy_meter_active_power
+      - entity: sensor.energy_meter_current
+    title: 24h Power & Current Trend
+    hours_to_show: 24
+    refresh_interval: 300
+  - type: statistics-graph
+    entities:
+      - sensor.energy_meter_import_active_energy
+    title: Daily Energy Consumption (Last 7 Days)
+    days_to_show: 7
+    period: day
+    chart_type: bar
+    stat_types:
+      - change
