@@ -83,7 +83,7 @@ views:
                 icon: mdi:transmission-tower-export
                 icon_color: green
               - type: custom:mushroom-entity-card
-                entity: sensor.energy_meter_active_energy
+                entity: sensor.energy_meter_total_active_energy
                 name: Total Active Energy
                 icon: mdi:counter
                 icon_color: blue
