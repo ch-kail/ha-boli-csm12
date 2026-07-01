@@ -1,7 +1,11 @@
 {
-    "name": "Boli CSM12 Electric Meter",
-    "render_readme": true,
-    "domains": ["sensor"],
-    "homeassistant": "2024.1.0",
-    "content_in_roor": false
+  "name": "BOLITECH CSM12 Energy Meter",
+  "domains": ["sensor"],
+  "country": "CN",
+  "homeassistant": "2024.1.0",
+  "dependencies": [
+    "piitaya/lovelace-mushroom"
+  ],
+  "content_in_root": false,
+  "render_readme": true
 }
